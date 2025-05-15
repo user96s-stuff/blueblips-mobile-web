@@ -55,6 +55,7 @@ if (!empty($posts) && is_array($posts)) {
 
 // Determine if current user is following the profile user
 $isFollowing = false;
+$followsYou = false;
 $isOwnProfile = false;
 if ($isLoggedIn && $user) {
     if ($client->getScreenName() === $user['screen_name']) {
@@ -63,6 +64,8 @@ if ($isLoggedIn && $user) {
         $friendship = $client->getFriendship($user['screen_name']);
         $isFollowing = isset($friendship['relationship']['source']['following']) ? 
                       $friendship['relationship']['source']['following'] : false;
+        $followsYou = isset($friendship['relationship']['source']['followed_by']) ? 
+                      $friendship['relationship']['source']['followed_by'] : false;
     }
 }
 
@@ -73,6 +76,10 @@ include('layout_header.php');
 <?php if ($user): ?>
     <div><img src="<?php echo h($user['profile_image_url_https']); ?>" alt="<?php echo h($user['name']); ?>"></div>
     <div class="title">About <?php echo h($user['name']); ?></div>
+
+    <?php if ($user['verified']): ?>
+        <div><img src="/img/verified.gif" alt="Verified"> Verified</div>
+    <?php endif; ?>
     
     <?php if (!empty($user['description'])): ?>
         <div><?php echo h($user['description']); ?></div>
@@ -93,6 +100,10 @@ include('layout_header.php');
             </form>
         </div>
     <?php endif; ?>
+
+    <?php if ($followsYou): ?>
+        <div>This user follows you.</div>
+    <?php endif; ?>
     
     <br>
     <div class="title">Status Updates</div>
@@ -105,6 +116,9 @@ include('layout_header.php');
                 <li>
                     <a href="profile.php?username=<?php echo h($post['user']['screen_name']); ?>">
                         <?php echo h($post['user']['screen_name']); ?>
+                        <?php if ($post['user']['verified']): ?>
+                            <img src="/img/verified.gif" alt="Verified">
+                        <?php endif; ?>
                     </a> 
                     <?php echo formatTweet($post['text']); ?>
                     <small><?php echo formatDate($post['created_at']); ?></small>

@@ -34,9 +34,10 @@ include('layout_header.php');
 ?>
 
 <div class="title">New Post</div>
+<div>What's on your mind? (140 characters max)</div>
 <div>
     <form action="new.php" method="post">
-        <textarea name="post" id="post" cols="30" rows="10" placeholder="What's on your mind? (140 characters max)" maxlength="140"></textarea>
+        <textarea name="post" id="post" cols="30" rows="10" maxlength="140"></textarea>
         <div class="r">
             <button type="submit">Post</button>
         </div>
