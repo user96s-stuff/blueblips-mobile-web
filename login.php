@@ -61,16 +61,18 @@ include('layout_header.php');
         <b>Password:</b>
         <input type="password" name="password" id="password">
         <br>
-        <label>
-            <input type="checkbox" name="remember"> Remember me
-        </label>
+        <input type="checkbox" name="remember">
+        <label>Remember me</label>
+        <br>
         <br>
         <button type="submit">Login</button>
     </form>
 </div>
 <br>
-<div class="title">Don't have an account?</div>
-<div>Make one on the regular web client, <a href="https://web.flirb.net">web.flirb.net</a></div>
+<div class="title">Forgot password?</div>
+<div><a href="http://flirb.net/forgot_password.php">Reset on the regular web client, flirb.net</a></div>
 <br>
+<div class="title">Don't have an account?</div>
+<div><a href="http://flirb.net/register.php">Register on the regular web client, flirb.net</a></div>
 
 <?php include('layout_footer.php'); ?> 
