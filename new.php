@@ -14,8 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['post'])) {
     
     if (empty($status)) {
         setError("Status cannot be empty");
-    } else if (strlen($status) > 140) {
-        setError("Status cannot exceed 140 characters");
+    } else if (strlen($status) > 280) {
+        setError("Status cannot exceed 280 characters");
     } else {
         $result = $client->postTweet($status);
         
@@ -34,10 +34,10 @@ include('layout_header.php');
 ?>
 
 <div class="title">New Post</div>
-<div>What's on your mind? (140 characters max)</div>
+<div>What's on your mind? (280 characters max)</div>
 <div>
     <form action="new.php" method="post">
-        <textarea name="post" id="post" cols="30" rows="10" maxlength="140"></textarea>
+        <textarea name="post" id="post" cols="30" rows="10" maxlength="280"></textarea>
         <div class="r">
             <button type="submit">Post</button>
         </div>
