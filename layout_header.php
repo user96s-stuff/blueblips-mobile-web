@@ -14,7 +14,9 @@ $error = getError();
     </head>
     <body>
         <div class="header">
-            <img src="img/logo.gif" alt="Flirb Logo">
+            <a href="index.php">
+                <img src="img/logo.gif" alt="Flirb Logo">
+            </a>
         </div>
         
         <?php if (!empty($error)): ?>
