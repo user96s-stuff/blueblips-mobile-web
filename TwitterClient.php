@@ -1,6 +1,6 @@
 <?php
 class TwitterClient {
-    private $apiUrl = 'http://localhost:5376';
+    private $apiUrl = 'http://localhost:5376'; // replace this by api.flirb.net
     private $username;
     private $password;
     private $accessToken;
