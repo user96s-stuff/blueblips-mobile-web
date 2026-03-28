@@ -1,6 +1,6 @@
 <?php
 class TwitterClient {
-    private $apiUrl = 'http://localhost:5376'; // replace this to api.flirb.net
+    private $apiUrl = 'http://t.blueblips.com'; // changed to blueblips api
     private $username;
     private $password;
     private $accessToken;
