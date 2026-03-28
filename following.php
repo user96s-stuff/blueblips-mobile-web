@@ -24,7 +24,7 @@ $following = $client->getFollowing($username, $perPage, $cursor);
 if (is_array($following) && isset($following['errors'])) {
     foreach ($following['errors'] as $errorItem) {
         if (isset($errorItem['code']) && $errorItem['code'] == 88) {
-            setError("You've reached the Flirb rate limit. Please wait a moment and try again later.");
+            setError("You've reached the BlueBlips rate limit. Please wait a moment and try again later.");
             $following = array(); // Clear following list so we don't try to display it
             break;
         }

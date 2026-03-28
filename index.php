@@ -24,7 +24,7 @@ $posts = $client->getHomeTimeline($perPage, $maxId);
 if (is_array($posts) && isset($posts['errors'])) {
     foreach ($posts['errors'] as $errorItem) {
         if (isset($errorItem['code']) && $errorItem['code'] == 88) {
-            setError("You've reached the Flirb rate limit. Please wait a moment and try again later.");
+            setError("You've reached the BlueBlips rate limit. Please wait a moment and try again later.");
             $posts = array(); // Clear posts so we don't try to display them
             break;
         }
@@ -38,7 +38,7 @@ if (!empty($posts) && is_array($posts)) {
     reset($posts); // Reset array pointer after end()
 }
 
-$pageTitle = "Home Timeline - Flirb Mobile";
+$pageTitle = "Home Timeline - BlueBlips Mobile";
 include('layout_header.php');
 ?>
 

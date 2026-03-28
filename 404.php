@@ -5,7 +5,7 @@ require_once('utils.php');
 http_response_code(404);
 
 $client = getTwitterClient();
-$pageTitle = "Page Not Found - Flirb Mobile";
+$pageTitle = "Page Not Found - BlueBlips Mobile";
 include('layout_header.php');
 ?>
 
