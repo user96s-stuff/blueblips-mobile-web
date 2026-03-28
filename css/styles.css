@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-    background-color: #FF3284;
+    background-color: #1DA1F2;
     padding: 3px;
 }
 
@@ -47,11 +47,11 @@ ul li small {
 a {
     text-decoration: none;
     font-weight: bold;
-    color: #FF3284;
+    color: #1DA1F2;
 }
 
 a:hover, button:hover {
-    background-color: #FF3284;
+    background-color: #1DA1F2;
     color: #fff;
 }
 
@@ -64,7 +64,7 @@ button:hover {
 }
 
 .footer {
-    background-color: #FF3284;
+    background-color: #1DA1F2;
     padding: 3px;
     text-align: center;
     color: #fff;
@@ -77,8 +77,8 @@ textarea {
 
 button {
     background-color: #fff;
-    color: #FF3284;
-    border: 1px solid #FF3284;
+    color: #1DA1F2;
+    border: 1px solid #1DA1F2;
     font-weight: bold;
     padding: 5px 10px;
 }

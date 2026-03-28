@@ -21,7 +21,7 @@ $posts = $client->getPublicTimeline($perPage, $maxId);
 if (is_array($posts) && isset($posts['errors'])) {
     foreach ($posts['errors'] as $errorItem) {
         if (isset($errorItem['code']) && $errorItem['code'] == 88) {
-            setError("You've reached the Flirb rate limit. Please wait a moment and try again later.");
+            setError("You've reached the BlueBlips rate limit. Please wait a moment and try again later.");
             $posts = array(); // Clear posts so we don't try to display them
             break;
         }
@@ -35,7 +35,7 @@ if (!empty($posts) && is_array($posts)) {
     reset($posts); // Reset array pointer after end()
 }
 
-$pageTitle = "Public Timeline - Flirb Mobile";
+$pageTitle = "Public Timeline - BlueBlips Mobile";
 include('layout_header.php');
 ?>
 
@@ -50,7 +50,7 @@ include('layout_header.php');
                 <a href="profile.php?username=<?php echo h($post['user']['screen_name']); ?>">
                     <?php echo h($post['user']['screen_name']); ?>
                     <?php if ($post['user']['verified']): ?>
-                        <img src="/img/verified.gif" alt="Verified">
+                        <img src="/img/verified.png" alt="Verified">
                     <?php endif; ?>
                 </a> 
                 <?php echo formatTweet($post['text']); ?>

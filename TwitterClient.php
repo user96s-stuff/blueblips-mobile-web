@@ -1,6 +1,6 @@
 <?php
 class TwitterClient {
-    private $apiUrl = 'http://t.blueblips.com'; // changed to blueblips api
+    private $apiUrl = 'http://t.blueblips.com'; // replaced this to t.blueblips.com
     private $username;
     private $password;
     private $accessToken;
@@ -40,8 +40,8 @@ class TwitterClient {
 
     // Check for remember me cookie and auto-login if present
     private function checkRememberMeCookie() {
-        if (!$this->isLoggedIn() && isset($_COOKIE['flirb_remember'])) {
-            $cookieData = json_decode($_COOKIE['flirb_remember'], true);
+        if (!$this->isLoggedIn() && isset($_COOKIE['blueblips_remember'])) {
+            $cookieData = json_decode($_COOKIE['blueblips_remember'], true);
             
             if (isset($cookieData['token']) && isset($cookieData['secret']) && 
                 isset($cookieData['user_id']) && isset($cookieData['screen_name'])) {
@@ -66,7 +66,7 @@ class TwitterClient {
         ];
         
         setcookie(
-            'flirb_remember',
+            'blueblips_remember',
             json_encode($cookieData),
             time() + $this->cookieExpiry,
             '/',
@@ -136,8 +136,8 @@ class TwitterClient {
         unset($_SESSION['twitter_screen_name']);
         
         // Remove the remember me cookie
-        if (isset($_COOKIE['flirb_remember'])) {
-            setcookie('flirb_remember', '', time() - 3600, '/');
+        if (isset($_COOKIE['blueblips_remember'])) {
+            setcookie('blueblips_remember', '', time() - 3600, '/');
         }
     }
 
@@ -193,7 +193,7 @@ class TwitterClient {
                 $fullUrl = $url . '?' . http_build_query($params);
                 curl_setopt($curl, CURLOPT_URL, $fullUrl);
                 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($curl, CURLOPT_USERAGENT, 'Flirb-Web/1.0');
+                curl_setopt($curl, CURLOPT_USERAGENT, 'BlueBlips-Web/1.0');
                 curl_setopt($curl, CURLOPT_HEADER, false);
                 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
                 curl_setopt($curl, CURLOPT_TIMEOUT, 30);
@@ -327,7 +327,7 @@ class TwitterClient {
             $fullUrl = $url . '?' . http_build_query($params);
             curl_setopt($curl, CURLOPT_URL, $fullUrl);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($curl, CURLOPT_USERAGENT, 'Flirb-Web/1.0');
+            curl_setopt($curl, CURLOPT_USERAGENT, 'BlueBlips-Web/1.0');
             curl_setopt($curl, CURLOPT_HEADER, false);
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
             curl_setopt($curl, CURLOPT_TIMEOUT, 30);
@@ -603,7 +603,7 @@ class TwitterClient {
         $headers = [
             'Content-Type: application/x-www-form-urlencoded',
             'Content-Length: ' . strlen($postData),
-            'User-Agent: Flirb-Web/1.0',
+            'User-Agent: BlueBlips-Web/1.0',
             'Accept: application/json'
         ];
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -654,7 +654,7 @@ class TwitterClient {
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_USERAGENT, 'Flirb-Web/1.0');
+        curl_setopt($curl, CURLOPT_USERAGENT, 'BlueBlips-Web/1.0');
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($curl, CURLOPT_TIMEOUT, 30);
         
@@ -722,7 +722,7 @@ class TwitterClient {
         
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_USERAGENT, 'Flirb-Web-Mobile/1.0');
+        curl_setopt($curl, CURLOPT_USERAGENT, 'BlueBlips-Web-Mobile/1.0');
         curl_setopt($curl, CURLOPT_HEADER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($curl, CURLOPT_TIMEOUT, 30);

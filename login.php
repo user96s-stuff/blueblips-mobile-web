@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle = "Login - Flirb Mobile";
+$pageTitle = "Login - BlueBlips Mobile";
 include('layout_header.php');
 ?>
 
@@ -70,9 +70,9 @@ include('layout_header.php');
 </div>
 <br>
 <div class="title">Forgot password?</div>
-<div><a href="http://flirb.net/forgot_password.php">Reset on the regular web client, flirb.net</a></div>
+<div><a href="http://blueblips.com/forgot_password.php">Reset on the regular web client, flirb.net</a></div>
 <br>
 <div class="title">Don't have an account?</div>
-<div><a href="http://flirb.net/register.php">Register on the regular web client, flirb.net</a></div>
+<div><a href="http://blueblips.com/">Register on the regular web client, flirb.net</a></div>
 
 <?php include('layout_footer.php'); ?> 

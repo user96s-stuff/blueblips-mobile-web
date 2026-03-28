@@ -12,7 +12,7 @@ if ($client->isLoggedIn()):
 <?php endif; ?>
 
 <div class="footer">
-    <small>© 2025-2026 Flirb</small>
+    <small>© 2026 BlueBlips</small>
 </div>
 </body>
 </html> 

@@ -1,11 +1,11 @@
 {
-    "short_name": "Flirb",
-    "name": "Flirb",
-    "background_color": "#FF3284",
-    "theme_color": "#FF3284",
+    "short_name": "BlueBlips",
+    "name": "BlueBlips",
+    "background_color": "#1DA1F2",
+    "theme_color": "#1DA1F2",
     "display": "standalone",
     "orientation": "portrait",
-    "start_url": "https://mbasic.flirb.net/",
+    "start_url": "https://mbasic.blueblips.com/",
     "icons": [
         {
             "src": "icon512.png",
