@@ -78,7 +78,7 @@ include('layout_header.php');
     <div class="title">About <?php echo h($user['name']); ?></div>
 
     <?php if ($user['verified']): ?>
-        <div><img src="/img/verified.gif" alt="Verified"> Verified</div>
+        <div><img src="/img/verified.png" alt="Verified"> Verified</div>
     <?php endif; ?>
     
     <?php if (!empty($user['description'])): ?>
@@ -117,7 +117,7 @@ include('layout_header.php');
                     <a href="profile.php?username=<?php echo h($post['user']['screen_name']); ?>">
                         <?php echo h($post['user']['screen_name']); ?>
                         <?php if ($post['user']['verified']): ?>
-                            <img src="/img/verified.gif" alt="Verified">
+                            <img src="/img/verified.png" alt="Verified">
                         <?php endif; ?>
                     </a> 
                     <?php echo formatTweet($post['text']); ?>
