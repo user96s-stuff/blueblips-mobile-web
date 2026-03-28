@@ -15,7 +15,7 @@ $error = getError();
     <body>
         <div class="header">
             <a href="index.php">
-                <img src="img/logo.png" alt="BlueBlips Logo">
+                <img src="img/logo.gif" alt="BlueBlips Logo">
             </a>
         </div>
         

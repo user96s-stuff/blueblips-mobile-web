@@ -70,9 +70,9 @@ include('layout_header.php');
 </div>
 <br>
 <div class="title">Forgot password?</div>
-<div><a href="http://blueblips.com/forgot_password.php">Reset on the regular web client, flirb.net</a></div>
+<div><a href="http://blueblips.com/forgot_password.php">Reset on the regular web client, blueblips.com</a></div>
 <br>
 <div class="title">Don't have an account?</div>
-<div><a href="http://blueblips.com/">Register on the regular web client, flirb.net</a></div>
+<div><a href="http://blueblips.com/">Register on the regular web client, blueblips.com</a></div>
 
 <?php include('layout_footer.php'); ?> 

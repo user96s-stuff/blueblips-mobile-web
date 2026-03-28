@@ -53,7 +53,7 @@ include('layout_header.php');
                 <a href="profile.php?username=<?php echo h($post['user']['screen_name']); ?>">
                     <?php echo h($post['user']['screen_name']); ?>
                     <?php if ($post['user']['verified']): ?>
-                        <img src="/img/verified.png" alt="Verified">
+                        <img src="/img/verified.gif" alt="Verified">
                     <?php endif; ?>
                 </a> 
                 <?php echo formatTweet($post['text']); ?>
